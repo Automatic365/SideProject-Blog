@@ -56,6 +56,40 @@ nav a {
 /* Hero Section */
 .hero {
     padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brunson-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.brunson-image:hover {
+    transform: translateY(-10px);
 }
 
 h1 {
@@ -73,26 +107,30 @@ h1 {
 }
 
 .value-prop {
-    max-width: 800px;
-    margin: 0 auto 3rem;
+    max-width: 600px;
+    margin-bottom: 3rem;
 }
 
 .lead {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .highlight {
     color: var(--primary-blue);
+    font-weight: 600;
 }
 
 .subtext {
     font-size: 1.25rem;
     color: #666;
+    line-height: 1.6;
 }
 
 /* CTA Button */
 .cta-button {
+    display: inline-block;
     background: var(--dark-navy);
     color: var(--white);
     border: none;
@@ -100,7 +138,41 @@ h1 {
     border-radius: 8px;
     font-size: 1.1rem;
     cursor: pointer;
-    margin: 2rem 0;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background: var(--primary-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .value-prop {
+        margin: 0 auto 2rem;
+    }
+
+    .gradient-text {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+    }
+
+    .brunson-image {
+        max-width: 80%;
+    }
 }
 
 /* Social Proof Section */
