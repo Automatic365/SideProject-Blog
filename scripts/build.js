@@ -24,25 +24,38 @@ async function build() {
     'utf-8'
   );
 
-  // Process index.md
-  const indexContent = fs.readFileSync(
-    path.join(__dirname, '../src/content/index.md'),
-    'utf-8'
-  );
+  // Get all markdown files
+  const contentDir = path.join(__dirname, '../src/content');
+  const files = fs.readdirSync(contentDir);
   
-  const { attributes, body } = frontMatter(indexContent);
-  const htmlContent = marked.parse(body);
-  
-  // Apply template
-  let finalHtml = baseTemplate
-    .replace('{{title}}', attributes.title)
-    .replace('{{content}}', htmlContent);
-  
-  // Write the processed file
-  fs.writeFileSync(
-    path.join(__dirname, '../public/index.html'),
-    finalHtml
-  );
+  // Process each markdown file
+  files.forEach(file => {
+    if (file.endsWith('.md')) {
+      const content = fs.readFileSync(
+        path.join(contentDir, file),
+        'utf-8'
+      );
+      
+      const { attributes, body } = frontMatter(content);
+      const htmlContent = marked.parse(body);
+      
+      // Apply template
+      let finalHtml = baseTemplate
+        .replace('{{title}}', attributes.title || 'My Site')
+        .replace('{{content}}', htmlContent);
+      
+      // Create output filename (change .md to .html)
+      const outputFile = file.replace('.md', '.html');
+      
+      // Write the processed file
+      fs.writeFileSync(
+        path.join(__dirname, '../public', outputFile),
+        finalHtml
+      );
+      
+      console.log(`Processed ${file} -> ${outputFile}`);
+    }
+  });
 
   console.log('Build complete!');
 }

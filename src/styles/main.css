@@ -18,8 +18,16 @@ header {
 }
 
 nav {
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 nav a {
@@ -27,9 +35,13 @@ nav a {
     color: #333;
 }
 
+nav a:hover {
+    color: #666;
+}
+
 main {
     min-height: 70vh;
-    padding: 2rem 0;
+    padding: 2rem;
 }
 
 footer {
