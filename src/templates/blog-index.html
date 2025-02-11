@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="blog-post">
+    <div class="blog-content">
+        {{ content | safe }}
+    </div>
+
+    <ul class="blog-post-list">
+    {% for post in posts %}
+        <li class="blog-post-preview">
+            <article>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="blog-post-meta">
+                    <time datetime="{{ post.date }}">{{ post.date }}</time>
+                    {% if post.author %}
+                    <span class="author">by {{ post.author }}</span>
+                    {% endif %}
+                </div>
+                {% if post.excerpt %}
+                <div class="excerpt">{{ post.excerpt | safe }}</div>
+                {% endif %}
+                <p><a href="{{ post.url }}" class="read-more">Read more →</a></p>
+            </article>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %} 

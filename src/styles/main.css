@@ -1,3 +1,133 @@
+:root {
+    --primary-blue: #1E88E5;
+    --light-blue: #90CAF9;
+    --dark-navy: #1A237E;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Make sure headings are also using Poppins */
+h1, h2, h3 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--dark-navy);
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, var(--primary-blue), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.value-prop {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.lead {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: var(--primary-blue);
+}
+
+.subtext {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* CTA Button */
+.cta-button {
+    background: var(--dark-navy);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 2rem 0;
+}
+
+/* Social Proof Section */
+.social-proof {
+    margin-top: 4rem;
+}
+
+.social-proof h3 {
+    font-size: 2rem;
+    color: var(--dark-navy);
+    margin-bottom: 2rem;
+}
+
+.avatar-strip {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.avatar-strip img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 /* Reset and basic styles */
 * {
     margin: 0;
@@ -48,4 +178,91 @@ footer {
     padding: 2rem 0;
     text-align: center;
     color: #666;
+}
+
+/* Blog styles */
+.blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.blog-content {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+.blog-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-navy);
+}
+
+.blog-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.blog-post-header {
+    margin-bottom: 2rem;
+}
+
+.blog-post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.blog-post-meta .author {
+    margin-left: 1rem;
+}
+
+.blog-post-content {
+    line-height: 1.6;
+}
+
+.blog-post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-post-preview {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-post-preview:last-child {
+    border-bottom: none;
+}
+
+.blog-post-preview h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.blog-post-preview a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-post-preview a:hover {
+    color: var(--primary-blue);
+}
+
+.blog-post-preview p {
+    margin: 1rem 0;
+    color: #444;
+}
+
+.blog-post-preview .read-more {
+    color: var(--primary-blue);
+    font-weight: 500;
 } 

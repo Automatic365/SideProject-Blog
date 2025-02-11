@@ -11,12 +11,14 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="/blog/">Blog</a></li>
         </ul>
     </nav>
     
     <main>
-        {{content}}
+        {% block content %}
+        {{content | safe}}
+        {% endblock %}
     </main>
     <footer>
         <p>&copy; 2024 Your Name</p>
