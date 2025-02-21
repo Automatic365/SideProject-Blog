@@ -23,5 +23,24 @@
         </article>
         {% endfor %}
     </div>
+
+    <div class="newsletter-signup">
+        <h2>Subscribe to My Newsletter</h2>
+        <p>Get updates on basketball, martial arts, and tech delivered straight to your inbox.</p>
+        <div class="systeme-form-container">
+            <form method="POST" action="https://YOUR_SYSTEME_DOMAIN.systeme.io/YOUR_FORM_ENDPOINT" class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Enter your email" required class="form-input">
+                </div>
+                <button type="submit" class="form-submit">Subscribe →</button>
+            </form>
+        </div>
+    </div>
 </div>
+
+<script>
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+}
+</script>
 {% endblock %} 

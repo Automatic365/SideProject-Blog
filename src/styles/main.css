@@ -337,4 +337,113 @@ footer {
 .blog-post-preview .read-more {
     color: var(--primary-blue);
     font-weight: 500;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-signup h2 {
+    font-size: 2rem;
+    color: var(--dark-navy);
+    margin-bottom: 1rem;
+}
+
+.newsletter-signup p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.systeme-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.form-submit {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+    background: var(--dark-navy);
+}
+
+@media (max-width: 768px) {
+    .newsletter-signup {
+        padding: 2rem 1rem;
+    }
+    
+    .systeme-form-container {
+        max-width: 100%;
+    }
+}
+
+/* ConvertKit Form Styles */
+.formkit-form {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+}
+
+.formkit-input {
+    border: 2px solid #eee !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+}
+
+.formkit-submit {
+    background: var(--primary-blue) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.formkit-submit:hover {
+    transform: translateY(-2px) !important;
+    background: var(--dark-navy) !important;
 } 
